@@ -3,7 +3,14 @@ package Calculator;
 public class Matrix {
 
 
-
+    public void showMatrix() {
+        for (int i = 0; i < this.matrix.length; i++) {
+            for (int j = 0; j < this.matrix[i].length; j++) {
+                System.out.print(this.matrix[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
 
 
 
@@ -57,7 +64,7 @@ public class Matrix {
             }
 
             determinant = determinant + a[i][0]*det(sonMatrix)*(Matrix.pow(-1,i));
-
+            sonMatrix = null;
         }
 
 
